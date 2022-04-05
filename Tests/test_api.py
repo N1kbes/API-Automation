@@ -17,7 +17,7 @@ class TestAvatar(SampleClient):
             "genres": list,
             "creators": list
         }
-        response = self.get_avatar(url)
+        response = self._get_avatar(url)
         body = json.loads(response.text)
 
         assert response.status_code == 200
